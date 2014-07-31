@@ -1,0 +1,134 @@
+\makeatletter
+
+\section{Introduction}
+We study the hypothetical scenario where the Perry Preschool Program (Perry) is applied to all U.S. children similar to those targeted by the original experiment. We investigate how this scenario would affect intra-black and black-white gaps in adult outcomes.  We follow \citet{heckman2010analyzing} to find the individuals in the National Longitudinal Survey of Youth 1979 (NLSY79) that are comparable to the participants of the Perry. Then, we utilize treatment effects from the Perry program and apply them to the comparable NLSY79 individuals. We refer to these individuals as \emph{disadvantaged}. This exercise permits us to learn how the gaps in relevant economic outcomes would look like had Perry been a national program. Particularly, we study: (i) the gap between disadvantaged and non-disadvantaged blacks (\emph{intra-black gap}) and (ii) the gap between blacks and whites (\emph{black-white gap}). 
+
+The results show that the intra-black gap is considerably reduced for both men and women. For the case of men, however, the high school completion (no GED) completion gap goes up (253\%) because Perry had a negative treatment effect.\footnote{We argue that the negative effect of Perry on high school completion for men is a peculiarity of the location of the program. Ypsilanti, Michigan is a city near Detroit, which has a market for auto-parts that is a potential source of employment for high school dropouts. Perry could potentially lead to the following mechanism. Perry caused the individuals to have greater cognitive and non-cognitive abilities because the treated group seems to do better in a variety of outcomes other than high school completion. Importantly, Perry raised the marginal benefit of studying: future human capital builds on past human capital and treated individuals had more accumulated human capital when they decided attend high school or not. However, the opportunity cost of for abler individuals also goes up because the foregone earnings increase. If the latter increase is bigger than the former, abler individuals drop out of high school. The abler individuals, in this case, were the treated. Thus, the treatment effect of Perry was negative for the case of high school completion. This story is reinforced by the fact that, even when they attended less to high school, the individuals treated by Perry had higher employment probabilities and real incomes at ages 27 and 40.}. The gap is reduced in the rest of the outcomes: employment at 27 (59\%), labor income at 27(42\%), employment at 40(533\%), and labor income at 40 (55\%). For the case of women the gap is reduced in every outcome. The biggest reduction is in high school graduation at 27 (not including GED) (26,345\%), while the reductions in the rest of the outcomes are the following: employment at 27 (170\%), labor income at 27(34\%), employment at 40(48\%), and labor income at 40 (60\%). 
+
+For the case of the black-white gap the results are lower in magnitude simply because the disadvantaged are a smaller fraction of the complete population than they are of the black population. The reductions for men are the following: employment at 27 (5\%), labor income at 27(3\%), employment at 40(24\%), and labor income at 40 (5\%). The high school completion gap has an increase (8\%), again, because the Perry program had a negative treatment effect for this outcome. For women, all the gaps decrease: high school graduation (not GED) (135\%), employment at 27 (44\%), labor income at 27(27\%), employment at 40(9\%), and labor income at 40 (18\%).
+
+\input{tabp_perry} 
+
+We proceed as follows. First, we describe the impacts of the Perry Program and the study's participants. Second, we describe characteristics of the NLSY79 that allow us to understand the effect of the Perry Program if extended to the population. Finally, we present results.
+
+\section{Treatment Effects of Perry}
+The Perry Preschool Program was conducted in Ypsilanti, Michigan, a town near Detroit. It began in 1962. All of the study's participants were African-American and three years old at entry. The Perry children were randomized into control and treatment groups. The program gave treated participants access to a two-and-a-half hour, full-year preschool, five days a week for two years. Early on the program improved IQ, achievement and personality skills. These early impacts resulted in less crime, increased incomes and higher educational attainment in adulthood. Much work has traced the source and true magnitude of these treatment effects. We briefly describe the Perry sample both before and after the program. Then we discuss how to compute treatment effects and the source we use for the effects in our exercise. 
+
+\subsection{The Perry Participants}
+The Perry sample represents a group of very disadvantaged African-Americans. Compared to the general population in the 1960s, the Perry children suffered from disadvantage along several dimensions. They were born to mothers who, on average, achieved less than ten years of education. About half of the Perry families received welfare payments and had no father in the household. The children lived in large families, having on average five siblings. Such material disadvantage predicted poor development. The Perry children displayed signs of early cognitive delay, their Stanford-Binet IQ scores well below the population average. For most of these children, the future promised little chance of success. However, an experiment to assess the benefit of early intervention would give some of the young children an opportunity. The experiment provided another opportunity for researchers to test the impacts of high-quality preschool. 
+
+\subsection{The Effect of the Perry Program}
+Both groups were followed continuously from early childhood up until age 40. Despite their many disadvantages and early deficiencies, the intervention improved the lives of the treated individuals over their counterparts in the control group. About 65\% of treated group members graduated from High School compared to 45\% in the control group. At age 40, 76\% of the treated group were working compared to 62\% in the control group. Additionally, average earnings were nearly 33\% higher. The program sharply reduced negative behaviors as well. Treated group members committed fewer crimes and smoked less. 
+
+Much literature focuses on the interpretation of treatment effects as causal effects. In particular, \citet{heckman2010analyzing} compute the causal effects of the Perry program on a variety of adult outcomes at ages 27 and 40. We utilize these effects to understand how a broader application of the program would affect the population. 
+
+\subsection{Computing Treatment Effects}
+The Perry Program is a randomized controlled trial (RCT). The assignment mechanism, $D$, is based on a random variable, $R$ and a vector of observable characteristics, $X$. The components of $X$ are IQ, entry cohort, socio-economic status, employment status of the mother, an indicator for elder sibling, and gender. Thus,
+\[
+D\sim M(R,X)
+\]
+
+\noindent The random variable, $R$, is independent of the vector of unobserved characteristics that determine treatment, $V$.  Then, 
+\[
+R\ci V
+\]
+
+\noindent Thus, the assignment mechanism is independent of potential outcomes $Y_{d}$, where the treatment is fixed at $d \in \{0,1\}$. Formally, under a RCT we have:
+
+\[
+ Y_d \ci D|X
+ \]
+
+
+\noindent Realized outcome can be written as follows:
+\[
+Y=DY_{1}+\left(1-D\right)Y_{0}
+\]
+
+
+\noindent Under a RCT we can identify the conditional Average Treatment Effect (ATE):
+\begin{eqnarray*}
+ATE(Y|X) = E[Y_1 = Y_0 | X]
+\end{eqnarray*}
+
+\noindent \citet{heckman2010analyzing} calculated treatment effects in this manner. After integrating over the distribution of observables $X$ they obtain ATEs separately for males and females. We apply these effects on comparable individuals in the NLSY79. But first we describe the feasibility of such an exercise with the NLSY79 data. 
+
+\section{NLSY79}
+In the previous section we discussed how to identify treatment effects conditional on observed characteristics. In this section we justify our exercise of imputing treatment effects to the NLSY79. The Perry and NLSY79 data share common support for most of the observed variables used in the Perry randomization protocol. Moreover, we note that the NLSY79 represents the young cohort of 1979, i.e., people aged 14 to 22, and, therefore, represents the national cohort to which the Perry individuals belonged. 
+
+The NLSY79 Cohort is a longitudinal project that follows the lives of a sample of American youths born in the years 1957-1964. The individuals were interviewed for the first time in 1979, when they were between 14 and 22 years old. Two subsamples were dropped and 9,964 respondents remained. The data are now available for Round 1 (1979 survey year) and to Round 24 (2010 survey year). 
+
+Three independent samples compose the NLSY79. These samples represent the entire population of youth aged 14 to 21 as of December 31, 1978, residing in the United States on January 1, 1979.  The three samples are: 1) A cross-sectional sample (6,111) designed to represent the non-institutionalized civilian segment of young people living in the United States in 1979 and born January 1, 1957, through December 31, 1964. 2) A supplemental sample (5,295) designed to oversample civilian Hispanic or Latino, black, and economically disadvantaged, nonblack/non-Hispanic youths born in the same time period. 3) A military sample (1,280) designed to represent the population born January 1, 1957, through December 31, 1961, serving in the military as of September 30, 1978. We asses the black-white and intra-black gaps with samples 1) and 2), respectively. 
+
+The design of the first sample is as follows. Following the initial screening process, 6,812 individuals from the cross-sectional sample were designated to be interviewed in the base year; of those, 90 percent or 6,111 respondents were actually interviewed in 1979. Specifically, through the several stages of sample selection (counties, enumeration districts-block groups, sample listing units), probabilities of selection are based upon either total population or total housing units.  Except for the economically disadvantaged supplemental sample, sampling of nonblack/non-Hispanic respondents was restricted to the 102 PSU National Sample.
+
+The design of the second sample is as follows. After screening, 5,969 individuals from the supplemental sample were designated for base year interviews; 89 percent or 5,295 respondents were actually interviewed.  Stratification specifically relevant for Hispanics or Latinos, non-Hispanic blacks, and economically disadvantaged, non-black/non-Hispanics was used. 
+
+\section{Policy Scenarios}
+In this section we begin by defining the various subpopulations in the U.S. born between the years 1957 and 1964. Then we use these definitions to define intra-black and black-white gaps in adult outcomes. Then we describe the policy scenarios under which we assess intra-black and black-white gaps. Additionally, we identify the source of variation in the gaps across the scenarios. 
+
+\subsection{Subpopulations}
+The Perry Program targeted disadvantaged black children aged three and four between 1962 and 1967 in Ypsilanti, Michigan. Eligible children scored below 85 on the Stanford-Binet IQ test, had at least one older sibling and scored low on a socioeconomic index comprised of: parental employment level, parental education, and housing density. The NLSY79 sample represents the national population born between 1957 and 1964. Thus, this sample represents the population to which the Perry target population belonged. We describe the subsample in the NLSY79 that the Perry program would have targeted had the program been available nationally. We denote this group the disadvantaged population. The other three groups we consider are the black non-disadvantaged population, the black population and the white population. Tables \ref{tab:tab_mal} and \ref{tab:tab_fem} show descriptive statistics for these groups, by gender. We consider males and females separately when investigating gaps and applying treatment effects.
+
+\subsubsection*{Black Disadvantaged}
+The black disadvantaged group is designed to mimic the Perry control group. Individuals eligible for the Perry program had an older sibling, a Stanford-Binet IQ score below 85 and a score below 11 on a socio-economic status (SES) index. The first criterion can be measured in an identical way in both the Perry data and the NLSY79. The latter two are approximated in the NLSY79.
+
+\citet{heckman2010analyzing} construct approximations of the SES index in Perry. One component of the SES index is household density, but the NLSY79 does not measure number of rooms in the household. The authors regress the number of rooms in the Perry dataset on mother's education, father's occupation, and family size. Using this linear prediction model in the NLSY79 sample, they estimate number of rooms and construct a Perry-like SES index. They approximate IQ with the AFQT score. They adjust the scores for education and age. We standardize the AFQT score to a mean of 100 and a standard deviation of 15 (the same mean and standard deviation as IQ in Perry). With a Perry-like SES index and the AFQT to approximate IQ we mimic the Perry eligibility criteria to find disadvantaged individuals in the NLSY79. From the full NLSY79 black sample we select individuals who at age 3: (i) have an older sibling, (ii) have an AFQT score lower than 85, and (iii) score less than 11 on the SES index.
+
+The NLSY79 sample includes $125$ males and $161$ females, representing a total of $751,092$ disadvantaged blacks in the U.S. population born between 1957 and 1964. According to Tables \ref{tab:tab_fem} and \ref{tab:tab_mal}, our group of disadvantaged blacks in the NLSY79 sample are comparable to those targeted by the Perry Program. 
+
+
+\subsubsection*{Black Non-Disadavantaged}
+The black non-disadvantaged group is composed of black individuals that did not satisfy the criteria outlined for the black disadvantaged group. In the NLSY79 sample, this group consists of $581$ males and $796$ females, representing a total of $3,777,065$ non-disadvantaged blacks in the U.S. population born between 1957 and 1964.
+
+\subsubsection*{Black}
+The black group is composed of the black disadvantaged and the black non-disadvantaged groups. In the NLSY79 sample, this group consists of $706$ males and $957$ females, representing all $4,528,157$ blacks in the U.S. population born between 1957 and 1964. 
+
+\subsubsection*{White}
+In the NLSY79 sample, the white group consists of $1,340$ males and $535$ females, representing all $24,907,478$ whites in the U.S. population born between 1957 and 1964.
+
+\subsection{The Gaps}
+We investigate two gaps in this paper: intra-black and black-white gaps. Here we define these gaps more precisely.
+
+\subsubsection*{Intra-black Gap}
+The intra-black gap measures the difference in adult outcomes between the non-disadvantaged black population and the disadvantaged black population. We measure the gap as both a mean difference between the groups, and as differences by decile.
+
+\subsubsection*{Black-white Gap}
+The black-white gap compares the difference in adult outcomes between the whole black population and the whole white population.  We measure the gap as both a mean difference between the groups, and as differences by decile.
+
+\subsection{Scenarios}
+We want to understand how the Perry Program, if nationally available, would have affected intra-black and black-white gaps in adult outcomes, under the assumption of no general equilibrium effects. We compare the following scenarios: (i) no action and (ii) making the Perry Program available to all disadvantaged blacks in the U.S. population. 
+
+\subsubsection*{Scenario 1: No Action}
+Scenario 1 is observed in the NLSY79 data. In this scenario, the Perry Program does not influence adult outcomes. We can describe the actual intra-black and black-white gaps in adult outcomes for the 1957 to 1964 birth cohort of the U.S. population. Thus, we can compare any treatment scenario to this baseline.
+
+\subsubsection*{Scenario 2: Perry Program Available to All Disadvantaged Blacks}
+Scenario 2 is counterfactual. We apply the gender-specific treatment effects of the Perry Program to the disadvantaged black population. We use the treatment effects calculated by \citet{heckman2010analyzing}, including: completed High School by ages 27 and 40, employed at ages 27 and 40, and labor income at ages 27 and 40. We add these treatment effects to the adult outcome for each disadvantaged individual in the NLSY79. Boosting the adult outcomes of disadvantaged blacks with the Perry treatment effect is the only source of variation in the intra-black and black-white gaps when comparing Scenario 1 with Scenario 2. However, because the disadvantaged group comprises a small portion of the whole black population, we expect the black-white gap to change little between the two scenarios.
+
+
+\section{Results}
+Tables \ref{tab:tabfem_perry} and \ref{tab:tabmal_perry} (Perry expansion) and \ref{tab:tabfem_abc} and \ref{tab:tabmal_abc} (ABC expansion) show the results. First, we display the number of people in both the samples of Perry and the NLSY79. Then we shows how many individuals the NLSY79 represents. There are 1,847,520 black disadvantaged individuals aged 14 to 22 years old in 1979. Second, we display the pretreatment variables to make sure that the NLSY79 disadvantaged individuals are comparable to the subjects intervened by Perry. Third, we show the adult outcomes for both Perry (treatment and control) and the NLSY79. For the NLSY79 we display the actual outcomes and the outcomes when the treatment effects are applied. Finally, we shows what the intra-black and the black-white gaps are when there is no treatment and when the treatments is applied. For this last case, we also display the percentage changed. We also display the characteristics of the earnings distributions in Figures \ref{female_earn_decile1} - \ref{male_earn_decile2}. 
+
+\clearpage
+\newgeometry{left=1.3cm,right=1.3cm,top=1.3cm,bottom=1.3cm}
+\input{tabfem_perry}
+\input{tabmal_perry}
+\input{tabfem_abc}
+\input{tabmal_abc}
+\restoregeometry
+
+\newgeometry{bottom=2.5cm}
+\input{decile_graphs_8}
+\restoregeometry
+
+
+
+
+%\input{Graphs}
+
+\medskip{}
+
+
+\medskip{}
+
+

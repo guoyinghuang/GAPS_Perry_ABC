@@ -1,0 +1,32 @@
+\documentclass[10pt,titlepage,doublespace]{ay_article}
+\usepackage{pdfpages}
+
+%Include Necessary Packages
+\input{HelperFiles/include_packages}
+%\input{HelperFiles/TSWC}
+\def\ci{\perp\!\!\!\perp}
+\def\nci{\ci\!\!\!\!\!\!\//}
+ 
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       TITLE PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\SetWatermarkOn{} 
+\input{0_title}
+\input{1_body_2}
+%\tableofcontents
+%\listoffigures
+%\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       Body
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+
+\bibliographystyle{chicago}
+\bibliography{BibtexFiles/heckman,BibtexFiles/heckman_add}
+
+\end{document}

@@ -1,0 +1,26 @@
+custom_draw.do is generated from the PSID website to extract the data from custom_draw.txt.
+
+fim4576_gid_BA_2_BAL_wide.do is generated from the PSID website to extract the data from 
+fim4576_gid_BA_2_BAL_wide.txt. You can regenerate these files by following these instructions
+at http://simba.isr.umich.edu/FIMS:
+
+	Run do-file generated from FIMS to get children and parents. 
+	Do file generated from PSID website for following selection in 
+	http://simba.isr.umich.edu/FIMS:
+
+	1. Select: 		Inter-generation
+
+	2. Parents: 		Biological and Adoptive
+
+	3. Generation Map: 	Individuals to Parents
+
+	4. Map Type:		Balanced Map
+
+	5. File Format:		Wide
+
+	5. Output Options:	ASCII With Stata Statements
+
+generate_psid_data.do is the driver file for the data creation exercise. It will call
+the other do-files to generate a refined, wide, dataset at the child level. 
+
+individual_data.do generates data at the individual level. 

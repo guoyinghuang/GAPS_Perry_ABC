@@ -1,0 +1,29 @@
+Summary of findings regarding treatment effects in ABC
+
+1. Working
+In the forecasting paper we have effects on this. In their paper, they don't, but they have huge differences into the treatment and control groups that are not significant (females) or get dissipated by SD (males). I would consider this a significant treatment effect.
+
+2. Education
+They find impacts in HS graduation, and also in having a 4-year degree. I don't think they measure effects in years of education (!) we find effects on this.
+
+3. Income
+They don't find effects, as the big unconditional differences get lost when conditioning. We found differences in the forecasting paper, but I would not consider this a significant effect. Effects are huge anyway.
+
+4. Teenage parenthood
+They don't look for effects in this. We found effects.
+
+5. Misdemeanors
+They found effects. We did too, but these variables are kind of impossible to measure in PSID
+
+PSID
+Pre-treatment variables
+- Number of Siblings
+- Mother's education
+- Father at home
+
+Outcomes
+- Working
+- 4-year Degree
+- HS graduation
+
+

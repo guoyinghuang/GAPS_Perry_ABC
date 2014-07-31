@@ -1,0 +1,459 @@
+%%This is the file ee.sty.
+%%This style file underlies the paper
+%%"Notation in Econometrics: a proposal for a standard"
+%%by Karim Abadir and Jan R. Magnus,
+%%The Econometrics Journal (2002), 5, 76-90.
+%%
+%In order to use the new commands in the
+%file ee.sty, the packages amsmath, amssymb,
+%and bm should be available. Thus, a paper could
+%have the following format:
+%
+%\documentclass[11pt,dvips,a4paper]{article}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{bm}
+%\input{ee.sty}
+%\begin{document}
+%...document text here...
+%\end{document}
+%
+%Alternatively, copy the new commands below and paste them to replace \input{ee.sty}
+%in the example above. This second method is the one we have used in the file notation.tex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\newcommand{\newoperator}[3]{\newcommand*{#1}{\mathop{#2}#3}}
+\newcommand{\renewoperator}[3]{\renewcommand*{#1}{\mathop{#2}#3}}
+%
+% symbols C,N,Q,R,Z for sets
+\newcommand{\SC}{\mathbb{C}}
+\newcommand{\SN}{\mathbb{N}}
+\newcommand{\SQ}{\mathbb{Q}}
+\newcommand{\SR}{\mathbb{R}}
+\newcommand{\SZ}{\mathbb{Z}}
+%
+% calligraphic capital letters
+\newcommand{\calA}{\mathcal{A}}
+\newcommand{\calB}{\mathcal{B}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calD}{\mathcal{D}}
+\newcommand{\calE}{\mathcal{E}}
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calG}{\mathcal{G}}
+\newcommand{\calH}{\mathcal{H}}
+\newcommand{\calI}{\mathcal{I}}
+\newcommand{\calJ}{\mathcal{J}}
+\newcommand{\calK}{\mathcal{K}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\calM}{\mathcal{M}}
+\newcommand{\calN}{\mathcal{N}}
+\newcommand{\calO}{\mathcal{O}}
+\newcommand{\calP}{\mathcal{P}}
+\newcommand{\calQ}{\mathcal{Q}}
+\newcommand{\calR}{\mathcal{R}}
+\newcommand{\calS}{\mathcal{S}}
+\newcommand{\calT}{\mathcal{T}}
+\newcommand{\calU}{\mathcal{U}}
+\newcommand{\calV}{\mathcal{V}}
+\newcommand{\calW}{\mathcal{W}}
+\newcommand{\calX}{\mathcal{X}}
+\newcommand{\calY}{\mathcal{Y}}
+\newcommand{\calZ}{\mathcal{Z}}
+%
+% bold lowercase and capital letters for vectors (v) and matrices (m)
+\newcommand{\mA}{\bm A}
+\newcommand{\va}{\bm a}
+\newcommand{\mB}{\bm B}
+\newcommand{\vb}{\bm b}
+\newcommand{\mC}{\bm C}
+\newcommand{\vc}{\bm c}
+\newcommand{\mD}{\bm D}
+\newcommand{\vd}{\bm d}
+\newcommand{\mE}{\bm E}
+\newcommand{\ve}{\bm e}
+\newcommand{\mF}{\bm F}
+\newcommand{\vf}{\bm f}
+\newcommand{\mG}{\bm G}
+\newcommand{\vg}{\bm g}
+\newcommand{\mH}{\bm H}
+\newcommand{\vh}{\bm h}
+\newcommand{\mI}{\bm I}
+\newcommand{\vi}{\bm i}
+\newcommand{\mJ}{\bm J}
+\newcommand{\vj}{\bm j}
+\newcommand{\mK}{\bm K}
+\newcommand{\vk}{\bm k}
+\newcommand{\mL}{\bm L}
+\newcommand{\vl}{\bm l}
+\newcommand{\mM}{\bm M}
+\newcommand{\vm}{\bm m}
+\newcommand{\mN}{\bm N}
+\newcommand{\vn}{\bm n}
+\newcommand{\mO}{\bm O}
+\newcommand{\vo}{\bm o}
+\newcommand{\mP}{\bm P}
+\newcommand{\vp}{\bm p}
+\newcommand{\mQ}{\bm Q}
+\newcommand{\vq}{\bm q}
+\newcommand{\mR}{\bm R}
+\newcommand{\vr}{\bm r}
+\newcommand{\mS}{\bm S}
+\newcommand{\vs}{\bm s}
+\newcommand{\mT}{\bm T}
+\newcommand{\vt}{\bm t}
+\newcommand{\mU}{\bm U}
+\newcommand{\vu}{\bm u}
+\newcommand{\mV}{\bm V}
+\newcommand{\vv}{\bm v}
+\newcommand{\mW}{\bm W}
+\newcommand{\vw}{\bm w}
+\newcommand{\mX}{\bm X}
+\newcommand{\vx}{\bm x}
+\newcommand{\mY}{\bm Y}
+\newcommand{\vy}{\bm y}
+\newcommand{\mZ}{\bm Z}
+\newcommand{\vz}{\bm z}
+%
+% underlined lowercase letters
+\newcommand{\ua}{\underline a}
+\newcommand{\ub}{\underline b}
+\newcommand{\uc}{\underline c}
+\newcommand{\ud}{\underline d}
+\newcommand{\ue}{\underline e}
+\newcommand{\uf}{\underline f}
+\newcommand{\ug}{\underline g}
+\newcommand{\uh}{\underline h}
+\newcommand{\ui}{\underline i}
+\newcommand{\uj}{\underline j}
+\newcommand{\uk}{\underline k}
+\newcommand{\ul}{\underline l}
+\newcommand{\um}{\underline m}
+\newcommand{\un}{\underline n}
+\newcommand{\uo}{\underline o}
+\newcommand{\up}{\underline p}
+\newcommand{\uq}{\underline q}
+\newcommand{\ur}{\underline r}
+\newcommand{\us}{\underline s}
+\newcommand{\ut}{\underline t}
+\newcommand{\uu}{\underline u}
+\newcommand{\uv}{\underline v}
+\newcommand{\uw}{\underline w}
+\newcommand{\ux}{\underline x}
+\newcommand{\uy}{\underline y}
+\newcommand{\uz}{\underline z}
+%
+% underlined uppercase letters
+\newcommand{\uA}{\underline A}
+\newcommand{\uB}{\underline B}
+\newcommand{\uC}{\underline C}
+\newcommand{\uD}{\underline D}
+\newcommand{\uE}{\underline E}
+\newcommand{\uF}{\underline F}
+\newcommand{\uG}{\underline G}
+\newcommand{\uH}{\underline H}
+\newcommand{\uI}{\underline I}
+\newcommand{\uJ}{\underline J}
+\newcommand{\uK}{\underline K}
+\newcommand{\uL}{\underline L}
+\newcommand{\uM}{\underline M}
+\newcommand{\uN}{\underline N}
+\newcommand{\uO}{\underline O}
+\newcommand{\uP}{\underline P}
+\newcommand{\uQ}{\underline Q}
+\newcommand{\uR}{\underline R}
+\newcommand{\uS}{\underline S}
+\newcommand{\uT}{\underline T}
+\newcommand{\uU}{\underline U}
+\newcommand{\uV}{\underline V}
+\newcommand{\uW}{\underline W}
+\newcommand{\uX}{\underline X}
+\newcommand{\uY}{\underline Y}
+\newcommand{\uZ}{\underline Z}
+%
+% bold underlined lowercase and capital letters for vectors (v) and matrices (m)
+\newcommand{\umA}{\underline {\bm A}}
+\newcommand{\uva}{\underline {\bm a}}
+\newcommand{\umB}{\underline {\bm B}}
+\newcommand{\uvb}{\underline {\bm b}}
+\newcommand{\umC}{\underline {\bm C}}
+\newcommand{\uvc}{\underline {\bm c}}
+\newcommand{\umD}{\underline {\bm D}}
+\newcommand{\uvd}{\underline {\bm d}}
+\newcommand{\umE}{\underline {\bm E}}
+\newcommand{\uve}{\underline {\bm e}}
+\newcommand{\umF}{\underline {\bm F}}
+\newcommand{\uvf}{\underline {\bm f}}
+\newcommand{\umG}{\underline {\bm G}}
+\newcommand{\uvg}{\underline {\bm g}}
+\newcommand{\umH}{\underline {\bm H}}
+\newcommand{\uvh}{\underline {\bm h}}
+\newcommand{\umI}{\underline {\bm I}}
+\newcommand{\uvi}{\underline {\bm i}}
+\newcommand{\umJ}{\underline {\bm J}}
+\newcommand{\uvj}{\underline {\bm j}}
+\newcommand{\umK}{\underline {\bm K}}
+\newcommand{\uvk}{\underline {\bm k}}
+\newcommand{\umL}{\underline {\bm L}}
+\newcommand{\uvl}{\underline {\bm l}}
+\newcommand{\umM}{\underline {\bm M}}
+\newcommand{\uvm}{\underline {\bm m}}
+\newcommand{\umN}{\underline {\bm N}}
+\newcommand{\uvn}{\underline {\bm n}}
+\newcommand{\umO}{\underline {\bm O}}
+\newcommand{\uvo}{\underline {\bm o}}
+\newcommand{\umP}{\underline {\bm P}}
+\newcommand{\uvp}{\underline {\bm p}}
+\newcommand{\umQ}{\underline {\bm Q}}
+\newcommand{\uvq}{\underline {\bm q}}
+\newcommand{\umR}{\underline {\bm R}}
+\newcommand{\uvr}{\underline {\bm r}}
+\newcommand{\umS}{\underline {\bm S}}
+\newcommand{\uvs}{\underline {\bm s}}
+\newcommand{\umT}{\underline {\bm T}}
+\newcommand{\uvt}{\underline {\bm t}}
+\newcommand{\umU}{\underline {\bm U}}
+\newcommand{\uvu}{\underline {\bm u}}
+\newcommand{\umV}{\underline {\bm V}}
+\newcommand{\uvv}{\underline {\bm v}}
+\newcommand{\umW}{\underline {\bm W}}
+\newcommand{\uvw}{\underline {\bm w}}
+\newcommand{\umX}{\underline {\bm X}}
+\newcommand{\uvx}{\underline {\bm x}}
+\newcommand{\umY}{\underline {\bm Y}}
+\newcommand{\uvy}{\underline {\bm y}}
+\newcommand{\umZ}{\underline {\bm Z}}
+\newcommand{\uvz}{\underline {\bm z}}
+
+% bold Greek lowercase letters for vectors (v)
+\newcommand{\valpha}{\bm \alpha}
+\newcommand{\vbeta}{\bm \beta}
+\newcommand{\vgamma}{\bm \gamma}
+\newcommand{\vdelta}{\bm \delta}
+\newcommand{\vepsi}{\bm \epsi}
+\newcommand{\vvarepsilon}{\bm \varepsilon}
+\newcommand{\vzeta}{\bm \zeta}
+\newcommand{\veta}{\bm \eta}
+\newcommand{\vtheta}{\bm \theta}
+\newcommand{\viota}{\bm \iota}
+\newcommand{\vkappa}{\bm \kappa}
+\newcommand{\vlambda}{\bm \lambda}
+\newcommand{\vmu}{\bm \mu}
+\newcommand{\vnu}{\bm \nu}
+\newcommand{\vxi}{\bm \xi}
+\newcommand{\vpi}{\bm \pi}
+\newcommand{\vrho}{\bm \rho}
+\newcommand{\vsigma}{\bm \sigma}
+\newcommand{\vtau}{\bm \tau}
+\newcommand{\vupsilon}{\bm \upsilon}
+\newcommand{\vphi}{\bm \phi}
+\newcommand{\vchi}{\bm \chi}
+\newcommand{\vpsi}{\bm \psi}
+\newcommand{\vomega}{\bm \omega}
+%
+% bold underlined Greek lowercase letters for vectors (v)
+%
+\newcommand{\ualpha}{\underline  \alpha}
+\newcommand{\ubeta}{\underline  \beta}
+\newcommand{\ugamma}{\underline  \gamma}
+\newcommand{\udelta}{\underline \delta}
+\newcommand{\uepsi}{\underline \epsi}
+\newcommand{\uvarepsilon}{\underline \varepsilon}
+\newcommand{\uzeta}{\underline \zeta}
+\newcommand{\ueta}{\underline \eta}
+\newcommand{\utheta}{\underline \theta}
+\newcommand{\uiota}{\underline \iota}
+\newcommand{\ukappa}{\underline \kappa}
+\newcommand{\ulambda}{\underline \lambda}
+\newcommand{\umu}{\underline \mu}
+\newcommand{\unu}{\underline \nu}
+\newcommand{\uxi}{\underline \xi}
+\newcommand{\upi}{\underline \pi}
+\newcommand{\urho}{\underline \rho}
+\newcommand{\usigma}{\underline \sigma}
+\newcommand{\utau}{\underline \tau}
+\newcommand{\uupsilon}{\underline \upsilon}
+\newcommand{\uphi}{\underline \phi}
+\newcommand{\uchi}{\underline \chi}
+\newcommand{\upsi}{\underline \psi}
+\newcommand{\uomega}{\underline \omega}
+%
+% bold underlined Greek lowercase letters for vectors (v)
+\newcommand{\uvalpha}{\underline {\bm \alpha}}
+\newcommand{\uvbeta}{\underline {\bm \beta}}
+\newcommand{\uvgamma}{\underline {\bm \gamma}}
+\newcommand{\uvdelta}{\underline {\bm \delta}}
+\newcommand{\uvepsi}{\underline {\bm \epsi}}
+\newcommand{\uvvarepsilon}{\underline {\bm \varepsilon}}
+\newcommand{\uvzeta}{\underline {\bm \zeta}}
+\newcommand{\uveta}{\underline {\bm \eta}}
+\newcommand{\uvtheta}{\underline {\bm \theta}}
+\newcommand{\uviota}{\underline {\bm \iota}}
+\newcommand{\uvkappa}{\underline {\bm \kappa}}
+\newcommand{\uvlambda}{\underline {\bm \lambda}}
+\newcommand{\uvmu}{\underline {\bm \mu}}
+\newcommand{\uvnu}{\underline {\bm \nu}}
+\newcommand{\uvxi}{\underline {\bm \xi}}
+\newcommand{\uvpi}{\underline {\bm \pi}}
+\newcommand{\uvrho}{\underline {\bm \rho}}
+\newcommand{\uvsigma}{\underline {\bm \sigma}}
+\newcommand{\uvtau}{\underline {\bm \tau}}
+\newcommand{\uvupsilon}{\underline {\bm \upsilon}}
+\newcommand{\uvphi}{\underline {\bm \phi}}
+\newcommand{\uvchi}{\underline {\bm \chi}}
+\newcommand{\uvpsi}{\underline {\bm \psi}}
+\newcommand{\uvomega}{\underline {\bm \omega}}
+%
+% bold Greek capital letters for matrices (m)
+\newcommand{\mGamma}{\bm \varGamma}
+\newcommand{\mDelta}{\bm \varDelta}
+\newcommand{\mTheta}{\bm \varTheta}
+\newcommand{\mLambda}{\bm \varLambda}
+\newcommand{\mXi}{\bm \varXi}
+\newcommand{\mPi}{\bm \varPi}
+\newcommand{\mSigma}{\bm \varSigma}
+\newcommand{\mUpsilon}{\bm \varUpsilon}
+\newcommand{\mPhi}{\bm \varPhi}
+\newcommand{\mPsi}{\bm \varPsi}
+\newcommand{\mOmega}{\bm \varOmega}
+%
+
+% bold underlined Greek capital letters for matrices (m)
+\newcommand{\umGamma}{\underline {\bm \varGamma}}
+\newcommand{\umDelta}{\underline {\bm \varDelta}}
+\newcommand{\umTheta}{\underline {\bm \varTheta}}
+\newcommand{\umLambda}{\underline {\bm \varLambda}}
+\newcommand{\umXi}{\underline {\bm \varXi}}
+\newcommand{\umPi}{\underline {\bm \varPi}}
+\newcommand{\umSigma}{\underline {\bm \varSigma}}
+\newcommand{\umUpsilon}{\underline {\bm \varUpsilon}}
+\newcommand{\umPhi}{\underline {\bm \varPhi}}
+\newcommand{\umPsi}{\underline {\bm \varPsi}}
+\newcommand{\umOmega}{\underline {\bm \varOmega}}
+
+% roman letters in mathematics
+\newcommand{\rb}{\ensuremath{\mathrm{b}}}
+\newcommand{\rB}{\ensuremath{\mathrm{B}}}
+\newcommand{\rC}{\ensuremath{\mathrm{C}}}
+\newcommand{\rD}{\ensuremath{\mathrm{D}}}
+\newcommand{\rf}{\ensuremath{\mathrm{f}}}
+\newcommand{\rF}{\ensuremath{\mathrm{F}}}
+\newcommand{\rI}{\ensuremath{\mathrm{I}}}
+\newcommand{\rH}{\ensuremath{\mathrm{H}}}
+\newcommand{\rL}{\ensuremath{\mathrm{L}}}
+\newcommand{\rN}{\ensuremath{\mathrm{N}}}
+\newcommand{\rt}{\ensuremath{\mathrm{t}}}
+\newcommand{\rU}{\ensuremath{\mathrm{U}}}
+\newcommand{\rIW}{\ensuremath{\mathrm{IW}}}
+\newcommand{\rIGam}{\ensuremath{\mathrm{IGam}}}
+\newcommand{\rGam}{\ensuremath{\mathrm{Gam}}}
+\newcommand{\rBeta}{\ensuremath{\mathrm{Beta}}}
+\newcommand{\rDir}{\ensuremath{\mathrm{Dir}}}
+%
+\newcommand{\Bin}{\ensuremath{\mathrm{Bin}}}
+\newcommand{\eu}{\ensuremath{\mathrm{e}}}
+\newcommand{\iu}{\ensuremath{\mathrm{i}}}
+\newcommand{\LN}{\ensuremath{\mathrm{LN}}}
+\newcommand{\IN}{\ensuremath{\mathrm{IN}}}
+
+\newcommand{\Poi}{\ensuremath{\mathrm{Poi}}}
+%
+\newcommand{\ped}[1]{\ensuremath{_\mathrm{#1}}} %pedex
+\newcommand{\ap}[1]{\ensuremath{^\mathrm{#1}}} %apex
+\renewoperator{\Re}{\mathrm{Re}}{\nolimits}
+\renewoperator{\Im}{\mathrm{Im}}{\nolimits}
+%
+% letters for (partial) differentiation
+%\newcommand{\rd}{\ensuremath{\mathrm{d}}}
+\makeatletter
+\newcommand{\rd}{\@ifnextchar^{\DIfF}{\DIfF^{}}}
+\def\DIfF^#1{%
+   \mathop{\mathrm{\mathstrut d}}%
+   \nolimits^{#1}\gobblespace}
+\def\gobblespace{\futurelet\diffarg\opspace}
+\def\opspace{%
+   \let\DiffSpace\!%
+   \ifx\diffarg(%
+   \let\DiffSpace\relax
+   \else
+   \ifx\diffarg[%
+   \let\DiffSpace\relax
+   \else
+   \ifx\diffarg\{%
+   \let\DiffSpace\relax
+   \fi\fi\fi\DiffSpace}
+\newcommand{\deriv}[3][]{\frac{\rd^{#1}#2}{\rd #3^{#1}}}
+\newcommand{\pderiv}[3][]{\frac{\partial^{#1}#2}{\partial #3^{#1}}}
+%
+% operatornames
+\newcommand{\bias}{\operatorname{bias}}
+\newcommand{\col}{\operatorname{col}}
+\newcommand{\corr}{\operatorname{corr}}
+\newcommand{\cov}{\operatorname{cov}}
+\newcommand{\dg}{\operatorname{dg}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\E}{\operatorname{E}}
+\newcommand{\eff}{\operatorname{eff}}
+\newcommand{\etr}{\operatorname{etr}}
+\newoperator{\ip}{\mathrm{int}}{\nolimits}
+\newcommand{\kur}{\operatorname{kur}}
+%\newcommand{\median}{\operatorname{med}}
+\newcommand{\MSE}{\operatorname{MSE}}
+\newcommand{\MSFE}{\operatorname{MSFE}}
+\newcommand{\OLS}{\operatorname{OLS}}
+\newcommand{\plim}{\operatorname{plim}}
+\newcommand{\resid}{\operatorname{resid}}
+\newcommand{\risk}{\operatorname{risk}}
+\newcommand{\rk}{\operatorname{rk}}
+\newcommand{\SE}{\operatorname{SE}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\var}{\operatorname{var}}
+\renewcommand{\vec}{\operatorname{vec}}
+\newcommand{\vech}{\operatorname{vech}}
+\newcommand{\argmin}{\operatorname{argmin}}
+%
+% other definitions
+\newcommand{\distr}{\sim}
+\newcommand{\adistr}{\stackrel{a}{\distr}}
+\newcommand{\diff}{\Delta}
+%\newcommand{\diff}{\bigtriangleup}
+\newcommand{\fdiff}{\diff_{\rf}}
+\newcommand{\bdiff}{\diff_{\rb}}
+%
+%\mathchardef\varepsilon="010F
+%\mathchardef\epsilon="0122
+%\mathchardef\eps="010F
+\newcommand{\eps}{\epsilon}
+\newcommand{\epsi}{\varepsilon}
+%
+\newcommand{\longto}{\longrightarrow}
+\newcommand{\pto}{\stackrel{p}{\longrightarrow}}
+\newcommand{\dto}{\stackrel{d}{\longrightarrow}}
+\newcommand{\wto}{\stackrel{w}{\longrightarrow}}
+%
+\newcommand{\Infmat}{\bm\calI}
+\newcommand{\Hesmat}{\bm\calH}
+\newcommand{\bcdot}{\raisebox{1pt}{\textbf{\large .}}}
+%
+\newcommand{\vones}{\bm\imath}
+\newcommand{\vzeros}{\boldsymbol{0}}
+\newcommand{\mZeros}{\mathbf{O}}
+%
+% additional commands
+\newcommand{\e}{\eu}% exponential e
+\newcommand{\mply}{\cdot} % multiplication symbol
+\newcommand{\rW}{\ensuremath{\mathrm{W}}} % Wishart distribution
+%%%%%
+%\newcommand{\interior}[1]{\overset{\circ}{#1}}
+%\newcommand{\mzeros}{\mZeros}
+%\newcommand{\widebar}{\overline}
+%\newcommand{\bin}{\Bin}
+%\newcommand{\Po}{\Poi}
+%\newcommand{\EE}[1]{\E\left(#1\right)}
+%\newcommand{\prob}[1]{\Pr\left(#1\right)}
+%\newcommand{\MAX}[1]{\max\left\{#1\right\}}
+%\newcommand{\MIN}[1]{\min\left\{#1\right\}}
+%
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}

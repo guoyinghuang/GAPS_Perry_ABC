@@ -1,0 +1,104 @@
+\newcommand{\mc}{\multicolumn}
+
+
+\externaldocument{apx_reserve}
+
+
+
+
+% BEGIN MATH COMMANDS
+    \newcommand{\phat}{\ensuremath{\hat{p}}}
+    \newcommand{\tildep}{\ensuremath{\tilde{p}}}
+    \newcommand\statindep{\protect\mathpalette{\protect\overlapper}{\perp}}
+    \newcommand\indep{\protect\mathpalette{\protect\overlapper}{\perp}}
+    \newcommand{\overlapper}[2]{\mathrel{\rlap{\ensuremath{#1#2}}\mkern6mu{#1#2}}}
+    \makeatletter
+    \newcommand{\moverlay}{\mathpalette\mov@rlay}
+    \newcommand{\mov@rlay}[2]{\leavevmode\vtop{\baselineskip\z@skip{}
+             \lineskiplimit-\maxdimen\ialign{\hfil\ensuremath{#1##}\hfil\cr#2\cr\cr}}}
+    \makeatother
+    \newcommand{\notstatindep}{\mathrel{\moverlay{\diagup\cr\statindep}}}
+    %%%%%%%%%%%%%%%%%%%%%%%%%
+    \newcommand{\setG}{\ensuremath{\mathcal{G}}}
+    \newcommand{\setI}{\ensuremath{\mathcal{I}}}
+    \newcommand{\setL}{\ensuremath{\mathcal{L}}}
+    \newcommand{\equald}{\ensuremath{\overset{d}{=}}}
+	\DeclareMathOperator{\Prob}{P}
+	\DeclareMathOperator{\supp}{supp}
+	\makeatletter
+	\newcommand{\mytag}[2]{%
+	  \text{#1}%
+	  \@bsphack
+	  \protected@write\@auxout{}%
+	         {\string\newlabel{#2}{{#1}{\thepage}}}%
+	  \@esphack
+	}
+	\makeatother
+% END MATH COMMANDS
+
+% BEGIN FORMATTING COMMANDS
+    \newcommand{\phantomdots}[1]{\phantom{#1}\!\!\!\!\!\!...}
+    \newcommand{\tablefootnotebf}[1]{\ensuremath{^{\mathbf{#1}}}}
+    \newcommand{\tablefootnote}[1]{\ensuremath{^{#1}}}
+%   \newcommand{\extratext}[1]{{\itshape #1}}
+    \newcommand{\extratext}[1]{\relax}
+
+\geometry{margin=1in}
+
+%\usepackage{draftwatermark}
+%\SetWatermarkFontSize{2cm}
+%\SetWatermarkScale{2}
+%\SetWatermarkLightness{.8}
+%%\newcommand{\SetWatermarkOn}{\SetWatermarkText{DRAFT---DO NOT DISTRIBUTE}}% use watermarks
+%\newcommand{\SetWatermarkOn}{\SetWatermarkText{}}% don't use watermarks
+%%\newcommand{\SetWatermarkOff}{\SetWatermarkText{}}
+%
+%\DeclareMathAlphabet{\mathitbf}{OML}{cmm}{b}{it}
+
+\interfootnotelinepenalty=100000
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% External Document settings
+
+%\externaldocument{nfp_factor_apx_10_08_11_tho}
+
+\theoremstyle{definition}
+    \newtheorem{theorem}{Theorem}
+    \renewcommand{\thetheorem}{\textbf{T-\arabic{theorem}}}
+    \newtheorem{definition}{Definition}
+    \renewcommand{\thedefinition}{\textbf{D-\arabic{definition}}}
+    \newtheorem{example}{Example}[section]
+    \newtheorem{model}{Model}
+    \renewcommand{\themodel}{\textbf{M-\arabic{model}}}
+    \newtheorem{surr}{Model}
+    \renewcommand{\thesurr}{\textbf{S-\arabic{model}}}
+    \newtheorem{empM}{Model}
+    \renewcommand{\theempM}{\textbf{E-\arabic{empM}}}
+    \newtheorem{empMprime}{Model}
+    \renewcommand{\theempMprime}{\textbf{E-\arabic{empM}$^{\prime}$}}
+    \newtheorem{hypM}{Model}
+    \renewcommand{\thehypM}{\textbf{H-\arabic{hypM}}}
+    \newtheorem{hypMprime}{Model}
+    \renewcommand{\thehypMprime}{\textbf{H-\arabic{hypM}$^{\prime}$}}
+    \newtheorem{hypothesis}{Hypothesis}
+    \renewcommand{\thehypothesis}{\textbf{H-\arabic{hypothesis}}}
+    \newtheorem{assumption}{Assumption}
+    \renewcommand{\theassumption}{\textbf{A-\arabic{assumption}}}
+    \newtheorem{assumptionPrime}{Assumption}
+    \renewcommand{\theassumptionPrime}{\textbf{A-\arabic{assumptionPrime}$^{\prime}$}}
+    \newtheorem{assumptionPrimeH}{Hypothesis}
+    \renewcommand{\theassumptionPrimeH}{\textbf{H-\arabic{assumptionPrime}$^{\prime}$}}
+    \newtheorem{algorithm}{Algorithm}
+    \newtheorem{axiom}{Axiom}
+    \renewcommand{\theaxiom}{\textbf{X-\arabic{axiom}}}
+    \newtheorem{lemma}{Lemma}
+    \renewcommand{\thelemma}{\textbf{L-\arabic{lemma}}}
+    \newtheorem{corollary}{Corollary}
+    \renewcommand{\thecorollary}{\textbf{C-\arabic{corollary}}}
+    \theoremstyle{remark}
+    \newtheorem{remark}{Remark}[section]
+    \renewcommand{\theremark}{\emph{\arabic{section}.\arabic{remark}}}
+
+% END MATH COMMANDS
+
+%Table Commands
+\renewcommand{\rothead}[2][60]{\makebox[9mm][c]{\rotatebox{#1}{\makecell[c]{#2}}}}%
